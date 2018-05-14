@@ -20,15 +20,25 @@ int main() {
 	for (int i = 0; i < pizzanum; i++)
 		cin >> pizza[i];
 
-	/*for (int i = 0; i < pizzanum; i++) {
-		for (int j = 0; j < oven_depth; j++) {
-			if (oven[j] < pizza[i] || oven[j] == 0) {
-				oven[j - 1] = 0;
-				count = j;
+	for (int i = 0; i < pizzanum; i++) {
+		
+		if (pizza[i] > oven[0]||oven_depth ==0) {
+			count = 0;
+			break;
+		}
+
+		for (int j = oven_depth - 1; j >= 0; j--) {
+
+			if (oven[j] >= pizza[i]) {
+				count = j+1;
+				oven_depth = j;
 				break;
 			}
+
 		}
-	}*/
+
+	}
+/*
 	int m;
 	int i = 0, j = oven_depth;
 	for (int k = 0; k < pizzanum; k++) {
@@ -51,12 +61,6 @@ int main() {
 		i = 0;
 		j = count - 1;
 	}
-
-
-
+*/
 	cout << count;
-
-	
-
-
 }
