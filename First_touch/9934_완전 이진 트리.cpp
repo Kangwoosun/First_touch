@@ -229,7 +229,7 @@ void preorder_right_tree(int arr[], int size, Tree<T>* parent) {
 	parent->set_right(tmp);
 	
 	if (size == 1) 
-		return;
+		return;	
 	
 	preorder_right_tree(arr + size / 2 + 1, size / 2, tmp);
 	preorder_left_tree(arr, size / 2, tmp);
