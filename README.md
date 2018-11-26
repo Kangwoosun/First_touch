@@ -1,2 +1,2 @@
 # First_touch
-Algorithm study
+Algorithm
